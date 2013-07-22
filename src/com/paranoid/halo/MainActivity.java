@@ -296,37 +296,6 @@ public class MainActivity extends PreferenceActivity {
         		.putBoolean("firstrun", false)
         		.commit();        	
         }
-        else{
-        	//Try to check if the device has PA installed.
-    		
-    		String hasPa = Utils.getProp("ro.pa");
-    		
-    		if(hasPa.equals("true")){
-    			// You're clever dude! No advice must be shown!
-            }
-    		else{
-    			AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-    			builder.setMessage(R.string.nopa_content)
-    			       .setTitle(R.string.nopa_title)
-    			       .setPositiveButton(R.string.nopa_download, new DialogInterface.OnClickListener() {
-    			           public void onClick(DialogInterface dialog, int id) {
-    			        	   String url = "http://goo.im/devs/paranoidandroid/roms";
-    			        	   Intent i = new Intent(Intent.ACTION_VIEW);
-    			        	   i.setData(Uri.parse(url));
-    			        	   startActivity(i);
-    			           }
-    			       })   
-    			       .setNegativeButton(R.string.nopa_ok, new DialogInterface.OnClickListener() {
-    			           public void onClick(DialogInterface dialog, int id) {
-    			        	   dialog.dismiss();
-    			           }
-    			       });
-
-    			AlertDialog nopa_dialog = builder.create();
-    			nopa_dialog.show();
-    		}
-        }
     }
 
 }
