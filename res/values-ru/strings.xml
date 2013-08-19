@@ -12,7 +12,7 @@
     <string name="icon_custom">Задать</string>
     <string name="unknown">Неизвестно</string>
 
-    <string name="stop_to_remove">Пожалуйста, преостановите сервис, прежде чем удалить приложение из списка</string>
+    <string name="stop_to_remove">Пожалуйста, приостановите сервис, прежде чем удалить приложение из списка</string>
     
     <string name="ext_notes">Заметки</string>
     <string name="ext_note1">Заметка 1</string>
